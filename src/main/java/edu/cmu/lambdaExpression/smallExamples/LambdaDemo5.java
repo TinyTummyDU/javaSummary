@@ -9,7 +9,7 @@ class BlockLambdaDemo2 {
   public static void main(String args[]) {
 
     // This block lambda that reverses the charactrers in a string.
-    org.cmu.lambda.StringFunc reverse =
+    StringFunc reverse =
         (str) -> {
           String result = "";
           int i;

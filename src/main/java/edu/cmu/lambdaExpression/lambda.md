@@ -488,6 +488,9 @@ public void testStaticMethodRef() {
     Predicate<Integer> p2 = integer -> TestUtil.isBiggerThan3(integer);
     //MethodReference形式
     Predicate<Integer> p3 = TestUtil::isBiggerThan3;
+    
+    
+    p3.test(1);
 
     Stream.of(1, 2, 3, 4, 5).filter(p3).forEach(System.out::println);
 }
@@ -533,6 +536,7 @@ public void testInstanceMethodRef1() {
     
 	//method reference
     BiFunction<Student, String, String> f3 = Student::getStatus;
+    
 
     System.out.println(getStudentStatus(new Student("erGouWang", 18), "study", f3));
 }

@@ -699,3 +699,24 @@ Consumer<String> consumer3 = ;
 【版权申明】非商业目的注明出处可自由转载
 博文地址：https://blog.csdn.net/ShuSheng0007/article/details/107562812
 出自：shusheng007
+
+
+
+
+
+# Expression和Statement
+
+## 定义
+
+Expression: Something which evaluates to a value. Example: 1+2/x 
+Statement: A line of code which does something. Example: GOTO 100
+
+## lambda中的使用规则
+
+只有一条statement可以加花括号(可嫁可不加)，但是有了花括号就必须有分号
+
+expression不可以加花括号，但是分号可嫁可不加
+
+![9681638434134_.pic](/Users/dyq/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/af5035e96eef6f772193c89b06cf7b03/Message/MessageTemp/f7cdacee1994b1e1452a79a83e85e8d2/Image/9681638434134_.pic.jpg)
+
+![10401638456757_.pic](/Users/dyq/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/af5035e96eef6f772193c89b06cf7b03/Message/MessageTemp/f7cdacee1994b1e1452a79a83e85e8d2/Image/10401638456757_.pic.jpg)

@@ -36,6 +36,23 @@ public class Test {
         Consumer<String> consumer3 = e->e.getBytes();
 
 
+        Integer integer = 1;
+        Function<Integer,String> function1 = (i)->{return "h"+i;};
+        Consumer<String> consumer4 = e-> {System.out.println(e);};
+
+
+        Function<Integer,String> function2 = (Integer i)->String.valueOf(i);;
+
+        Function<Integer,String> function5 =  (i)->{return String.valueOf(i);};
+        Function<Integer,String> function6 =  (i)->{
+            return String.valueOf(i);
+        };
+
+        Function<Integer,String> function3 = (Integer i)-> "h"+ i;;
+        Function<Integer,String> function4 = (Integer i)-> "h"+ i;
+
+
+
     }
 
 

@@ -556,3 +556,116 @@ Compares the specified object with this set for equality. Returns true if the sp
     }
  2: V remove(Object key);
 ```
+
+## 11.三种set实现
+
+### HashSet
+
+Set接口类继承了Conllection接口类，是一种集合类。Set的实现类有三个。
+
+HashSet：
+    HashSet类按照哈希算法来存取集合中的对象，存取速度比较快。
+
+​    1、Set中是不能出现重复数据的。
+
+​    2、Set中可以出现空数据。
+
+​    3、Set中的数据是无序的。
+
+```
+例：
+
+Set<String> set = new HashSet<String>();  
+    for(int i= 0;i<5;i++){  
+       set.add(i+"");  
+    }  
+    set.add("2");       //重复数据，不会写入  
+    set.add(null);      //可以写入空数据  
+    Iterator<String> iter = set.iterator();  
+    while(iter.hasNext()){  
+       System.out.println(iter.next());        //输出是无序的  
+    }  
+
+/*这段执行之后的打印输出是：
+null  
+3  
+2  
+1  
+0  
+4  
+
+```
+
+###  LinkedHashSet
+
+1、LinkedHashSet是有序的（不同于HashSet）。
+
+ 2、LinkedHashSet在迭代访问Set中的全部元素时，性能比HashSet好，但是插入时性能稍微逊色于HashSet。
+
+Set<String> set = new LinkedHashSet<String>();  
+for(int i= 0;i<5;i++){  
+    set.add(i+"");  
+}  
+set.add("2");       //重复数据，不会写入  
+set.add(null);      //可以写入空数据  
+Iterator<String> iter = set.iterator();  
+while(iter.hasNext()){  
+    System.out.println(iter.next());        //输出是有序的  
+}  
+
+/*输出打印如下：
+0  
+1  
+2  
+3  
+4    
+null  
+
+### TreeSet
+
+###       特点是：
+
+​             1.不能写入空数据
+​    
+​             2.写入的数据是有序的。
+​    
+​             3.不写入重复数据
+
+例：
+
+Set<String> set = new TreeSet<String>();  
+for(int i= 0;i<5;i++){  
+    set.add(i+"");  
+}  
+set.add("2");       //重复数据，不会写入  
+//set.add(null);        //不可以写入空数据        
+Iterator<String> iter = set.iterator();  
+while(iter.hasNext()){  
+    System.out.println(iter.next());        //输出是有序的  
+}  
+
+/*输出打印为：
+0  
+1  
+2  
+3  
+4  
+
+
+
+```
+public SortedSet<E> headSet(E toElement) {
+    return headSet(toElement, false);
+}
+
+```
+
+```
+public SortedSet<E> tailSet(E fromElement) {
+    return tailSet(fromElement, true);
+}
+```
+
+
+
+<img src="/Users/dyq/Desktop/截屏2021-12-02 下午11.15.18.png" alt="截屏2021-12-02 下午11.15.18" style="zoom:50%;" />

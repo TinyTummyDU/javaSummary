@@ -720,3 +720,7 @@ expression不可以加花括号，但是分号可嫁可不加
 ![9681638434134_.pic](/Users/dyq/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/af5035e96eef6f772193c89b06cf7b03/Message/MessageTemp/f7cdacee1994b1e1452a79a83e85e8d2/Image/9681638434134_.pic.jpg)
 
 ![10401638456757_.pic](/Users/dyq/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/af5035e96eef6f772193c89b06cf7b03/Message/MessageTemp/f7cdacee1994b1e1452a79a83e85e8d2/Image/10401638456757_.pic.jpg)
+
+是不是凡是有return值的，如果要写return的statement，此时就不适用“唯一statement可以省略花括号” 的 规则了
+
+String.valueOf(i) 就是一个 expression，不能看成statement
